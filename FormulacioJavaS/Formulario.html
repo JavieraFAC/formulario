@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!----------------------------------->
+
+<div class="container">
+    <h2>Formulario de contacto</h2>
+    <p>Te gustaría trabajar con nosotros ?</p>
+    <hr>
+
+
+<!----------COMIENZO FORMULARIO---------------->
+  <form id="formulario" action="pagina.php" method="post">
+<!--NOMBRE---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="nombre">Nombre : </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" >
+      </div>
+    </div>
+<!--APELLIDO---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="apellido">Apellido : </label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" >
+      </div>
+    </div>
+<!--CORREO---------------------------->
+    <div class="row">
+        <div class="col-25">
+          <label for="correo">Correo : </label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" >
+        </div>
+      </div>
+<!--SECTOR---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="sector">Sector : </label>
+      </div>
+      <div class="col-75">
+        <select id="sector" name="sector" >
+            <option value="">Selecciona ubicación</option>           
+          <option value="vinadelmar">Viña del Mar</option>
+          <option value="valpo">Valparaiso</option>
+          <option value="quilpue">Quilpue</option>
+          <option value="concon">Concon</option>
+        </select>
+      </div>
+    </div>
+<!--COMENTARIOS---------------------------->
+    <div class="row">
+      <div class="col-25">
+        <label for="comentario">Comentarios : </label>
+      </div>
+      <div class="col-75">
+        <textarea id="comentario" name="comentario" placeholder="Comentarios.." style="height:100px"></textarea>
+      </div>
+    </div>
+<!--terminos y condiciones ------------------->
+<div class="row">
+  <div class="col-25">
+  </div>
+  <div class="col-75">
+    <input type="checkbox" id="terminos" name="terminos">
+    <label for="terminos" class="labelCheck">Acepto los términos y condiciones</label>
+</div>
+</div>
+
+<!--BOTON---------------------------->
+    <div class="row">
+      <input type="submit" value="Agregar">
+      <p id="mensajeError"></p>
+    </div>
+  </form>
+</body>
+
+    <!--Java Script-->
+    <script src="validaciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</html>
